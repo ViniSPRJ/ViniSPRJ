@@ -11,3 +11,11 @@
 ViniSPRJ/ViniSPRJ is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+
+## Asset Management Workflow Example
+
+Run a simple demonstration of the workflow:
+
+```bash
+python -m asset_management.coordinator
+```
