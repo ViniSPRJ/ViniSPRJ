@@ -1,0 +1,4 @@
+# Local DeepAgent Requirements
+
+# Required for XLSM file support
+openpyxl>=3.0.0
