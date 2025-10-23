@@ -23,7 +23,8 @@ class StatsAnalyzer:
                 self._max[key] = num if key not in self._max else max(self._max[key], num)
 
     def finalize(self) -> Dict[str, Dict[str, float]]:
-        mean = {k: self._sum[k] / self._count[k] for k in self._sum}
+        mean = {k: self._sum[k] / self._count[k] if self._count[k] > 0 else 0.0
+                for k in self._sum}
         return {
             'count': self._count,
             'mean': mean,
