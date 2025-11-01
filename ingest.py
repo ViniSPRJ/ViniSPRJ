@@ -14,8 +14,15 @@ class DataIngestor:
             return self._read_csv(self.path)
         if self.path.endswith('.xlsm'):
             csv_path = self._xlsm_to_csv(self.path)
-            return self._read_csv(csv_path)
+            return self._read_csv_and_cleanup(csv_path)
         raise ValueError('Unsupported file format')
+
+    def _read_csv_and_cleanup(self, path: str) -> Iterator[List[Dict[str, str]]]:
+        try:
+            yield from self._read_csv(path)
+        finally:
+            import os
+            os.remove(path)
 
     def _read_csv(self, path: str) -> Iterator[List[Dict[str, str]]]:
         with open(path, newline='') as f:
