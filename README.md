@@ -12,5 +12,13 @@ ViniSPRJ/ViniSPRJ is a ✨ special ✨ repository because its `README.md` (this 
 You can click the Preview link to take a look at your changes.
 --->
 
+## Asset Management Workflow Example
+
+Run a simple demonstration of the workflow:
+
+```bash
+python -m asset_management.coordinator
+```
+
 ## Projetos
 - **Local_Agent**: exemplo de agente local containerizado disponível em `Local_Agent/`. Consulte a pasta para detalhes.
