@@ -19,3 +19,6 @@ Run a simple demonstration of the workflow:
 ```bash
 python -m asset_management.coordinator
 ```
+
+## Projetos
+- **Local_Agent**: exemplo de agente local containerizado disponível em `Local_Agent/`. Consulte a pasta para detalhes.
